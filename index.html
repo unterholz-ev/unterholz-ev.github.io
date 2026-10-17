@@ -187,7 +187,7 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div class="space-y-4">
                         <div class="h-48 bg-gray-800 rounded-xl overflow-hidden border border-brandGray">
-                            <img src="downhill.jpeg" alt="Biker Jump" class="w-full h-full object-cover">
+                            <img src="track.jpeg" alt="Biker Jump" class="w-full h-full object-cover">
                         </div>
                         <div class="bg-brandDark p-6 rounded-xl border border-brandYellow/20 text-center">
                             <i class="fa-solid fa-users text-4xl text-brandYellow mb-2"></i>
@@ -394,56 +394,50 @@
                     </div>
                 </div>
 
-                <!-- Form Column -->
-                <div class="lg:col-span-7">
-                    <div class="bg-brandDark p-6 sm:p-8 rounded-2xl border-2 border-brandYellow/30 shadow-2xl relative">
-                        <h3 class="font-heading text-3xl font-bold text-white mb-1">ANFRAGE & MITGLIEDSANTRAG</h3>
-                        <p class="text-sm text-gray-400 mb-6">Fülle das Formular aus, um eine Nachricht direkt an den Vorstand zu senden.</p>
+               <!-- Form Column -->
+<div class="lg:col-span-7">
+    <div class="bg-brandDark p-6 sm:p-8 rounded-2xl border-2 border-brandYellow/30 shadow-2xl relative">
+        <h3 class="font-heading text-3xl font-bold text-white mb-1">ANFRAGE & MITGLIEDSANTRAG</h3>
+        <p class="text-sm text-gray-400 mb-6">Fülle das Formular aus, um eine Nachricht direkt an den Vorstand zu senden.</p>
 
-                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                            <div class="grid sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Vorname *</label>
-                                    <input type="text" id="firstName" required minlength="2" placeholder="z. B. Max" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Nachname *</label>
-                                    <input type="text" id="lastName" required minlength="2" placeholder="z. B. Mustermann" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
-                                </div>
-                            </div>
-
-                            <div class="grid sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Deine E-Mail *</label>
-                                    <input type="email" id="email" required placeholder="deine@adresse.de" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Geburtsdatum</label>
-                                    <input type="date" id="birthdate" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Anliegen / Typ *</label>
-                                <select id="requestType" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
-                                    <option value="Vereinsmitgliedschaft (Mitgliedsantrag)">Vereinsmitgliedschaft (Mitgliedsantrag)</option>
-                                    <option value="Schnuppertraining / Probetraining">Schnuppertraining / Probetraining</option>
-                                    <option value="Trackbuilding / Trailcare">Trackbuilding / Trailcare unterstützen</option>
-                                    <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Deine Nachricht *</label>
-                                <textarea id="message" rows="4" required minlength="10" placeholder="Moin Unterholz e.V., ich würde gerne mitfahren..." class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition"></textarea>
-                            </div>
-
-                            <button type="submit" class="w-full skew-badge bg-brandYellow text-brandDark font-heading font-bold text-xl py-4 rounded uppercase hover:bg-white transition glow-yellow mt-4">
-                                <span class="unskew"><i class="fa-solid fa-paper-plane mr-2"></i> Anfrage Absenden</span>
-                            </button>
-                        </form>
-                    </div>
+        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Vorname *</label>
+                    <input type="text" id="firstName" required minlength="2" placeholder="z. B. Max" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
                 </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Nachname *</label>
+                    <input type="text" id="lastName" required minlength="2" placeholder="z. B. Mustermann" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Deine E-Mail *</label>
+                <input type="email" id="email" required placeholder="deine@adresse.de" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Anliegen / Typ *</label>
+                <select id="requestType" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
+                    <option value="Vereinsmitgliedschaft (Mitgliedsantrag)">Vereinsmitgliedschaft (Mitgliedsantrag)</option>
+                    <option value="Schnuppertraining / Probetraining">Schnuppertraining / Probetraining</option>
+                    <option value="Trackbuilding / Trailcare">Trackbuilding / Trailcare unterstützen</option>
+                    <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Deine Nachricht *</label>
+                <textarea id="message" rows="4" required minlength="10" placeholder="Moin Unterholz e.V., ich würde gerne mitfahren..." class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition"></textarea>
+            </div>
+
+            <button type="submit" class="w-full skew-badge bg-brandYellow text-brandDark font-heading font-bold text-xl py-4 rounded uppercase hover:bg-white transition glow-yellow mt-4">
+                <span class="unskew"><i class="fa-solid fa-paper-plane mr-2"></i> Anfrage Absenden</span>
+            </button>
+        </form>
+    </div>
+</div>
 
             </div>
         </div>
