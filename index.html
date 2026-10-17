@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unterholz e.V. | Downhill & Freeride Teterow</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Oswald & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandYellow: '#E2FF00', // Neon Gelb basierend auf Banner
+                        brandDark: '#0D0E10',
+                        brandCharcoal: '#181A1F',
+                        brandGray: '#242830',
+                        brandAccent: '#CCFF00',
+                    },
+                    fontFamily: {
+                        heading: ['Oswald', 'sans-serif'],
+                        body: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .skew-badge {
+            transform: skewX(-12deg);
+        }
+        .unskew {
+            transform: skewX(12deg);
+        }
+        .glow-yellow {
+            box-shadow: 0 0 25px rgba(226, 255, 0, 0.3);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0D0E10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E2FF00;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-brandDark text-gray-100 font-body antialiased selection:bg-brandYellow selection:text-black">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-brandYellow/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- LOGO BEREICH (Links ausgerichtet) -->
+            <a href="#" class="flex items-center justify-start group">
+                <img src="logo.svg" alt="Unterholz e.V. Logo" class="h-14 sm:h-16 w-auto object-contain object-left">
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-heading text-lg tracking-wider">
+                <a href="#about" class="hover:text-brandYellow transition">Über Uns</a>
+                <a href="#track" class="hover:text-brandYellow transition">Die Strecke</a>
+                <a href="#activities" class="hover:text-brandYellow transition">Workshops & Training</a>
+                <a href="#join" class="hover:text-brandYellow transition">Mitglied Werden</a>
+            </nav>
+
+            <!-- CTA Button & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="#join" class="hidden sm:inline-flex skew-badge bg-brandYellow text-brandDark font-heading font-bold px-6 py-2 rounded text-lg uppercase hover:bg-white transition glow-yellow">
+                    <span class="unskew">Join The Crew</span>
+                </a>
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-brandCharcoal border-b border-brandYellow/20 px-6 py-6 space-y-4">
+            <a href="#about" onclick="toggleMobileMenu()" class="block font-heading text-xl hover:text-brandYellow">Über Uns</a>
+            <a href="#track" onclick="toggleMobileMenu()" class="block font-heading text-xl hover:text-brandYellow">Die Strecke</a>
+            <a href="#activities" onclick="toggleMobileMenu()" class="block font-heading text-xl hover:text-brandYellow">Workshops & Training</a>
+            <a href="#join" onclick="toggleMobileMenu()" class="block font-heading text-xl hover:text-brandYellow">Mitglied werden</a>
+            <a href="#join" onclick="toggleMobileMenu()" class="block text-center bg-brandYellow text-brandDark font-heading font-bold py-3 rounded uppercase">
+                Join The Crew
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION MIT FOTO-HINTERGRUND -->
+    <section class="relative min-h-screen pt-28 pb-20 flex items-center justify-center overflow-hidden bg-brandDark">
+        <!-- Hintergrundbild -->
+        <div class="absolute inset-0 z-0">
+    
+    <img src="top.jpg" alt="Downhill Background" class="w-full h-full object-cover object-left lg:object-center opacity-99">
+    <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/50 to-brandDark/70"></div>
+</div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center lg:text-left">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="inline-block skew-badge bg-brandYellow text-brandDark font-heading font-bold text-sm sm:text-base px-4 py-1 uppercase tracking-wider">
+                        <span class="unskew"><i class="fa-solid fa-location-dot mr-2"></i>Heidberge Teterow</span>
+                    </div>
+
+                    <h1 class="font-heading text-5xl sm:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-none text-white">
+                        SHREDDEN IN DEN <span class="text-brandYellow block">HEIDBERGEN</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 font-medium">
+                        Willkommen beim <strong class="text-white">Unterholz e.V.</strong> – Deinem Downhill- & Freeride-Verein in Teterow. Dirt, Adrenalin, fette Sprünge und eine starke Community seit über 10 Jahren!
+                    </p>
+
+                    <!-- Features Pills -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
+                        <span class="bg-brandGray/80 backdrop-blur-sm border border-brandYellow/30 px-4 py-2 rounded-md font-heading text-lg font-bold text-brandYellow">
+                            <i class="fa-solid fa-bicycle mr-1"></i> RIDE + FUN
+                        </span>
+                        <span class="bg-brandGray/80 backdrop-blur-sm border border-brandYellow/30 px-4 py-2 rounded-md font-heading text-lg font-bold text-brandYellow">
+                            <i class="fa-solid fa-fire mr-1"></i> BBQ + CHILL
+                        </span>
+                        <span class="bg-brandGray/80 backdrop-blur-sm border border-brandYellow/30 px-4 py-2 rounded-md font-heading text-lg font-bold text-brandYellow">
+                            <i class="fa-solid fa-hammer mr-1"></i> TRACKBUILDING
+                        </span>
+                        <span class="bg-brandGray/80 backdrop-blur-sm border border-brandYellow/30 px-4 py-2 rounded-md font-heading text-lg font-bold text-brandYellow">
+                            <i class="fa-solid fa-graduation-cap mr-1"></i> WORKSHOPS
+                        </span>
+                    </div>
+
+                    <div class="pt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#track" class="w-full sm:w-auto skew-badge bg-brandYellow text-brandDark font-heading font-bold text-xl px-8 py-4 rounded text-center uppercase hover:bg-white transition glow-yellow">
+                            <span class="unskew"><i class="fa-solid fa-map-location-dot mr-2"></i> Strecken-Infos</span>
+                        </a>
+                        <a href="#join" class="w-full sm:w-auto skew-badge border-2 border-brandYellow text-brandYellow hover:bg-brandYellow hover:text-brandDark font-heading font-bold text-xl px-8 py-4 rounded text-center uppercase transition">
+                            <span class="unskew"><i class="fa-solid fa-user-plus mr-2"></i> Join the Crew</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: ÜBER UNS -->
+    <section id="about" class="py-20 bg-brandCharcoal border-y border-brandYellow/10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <div class="space-y-6">
+                    <div class="inline-block bg-brandGray text-brandYellow px-3 py-1 font-heading text-sm font-bold uppercase tracking-wider rounded border border-brandYellow/30">
+                        Wer wir sind
+                    </div>
+                    <h2 class="font-heading text-4xl sm:text-5xl font-black uppercase text-white leading-tight">
+                        LEIDENSCHAFT <span class="text-brandYellow">DIRT & ADRENALIN</span>
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Der <strong class="text-white">Unterholz e.V.</strong> ist die Heimat für alle Downhill-, Freeride- und Mountainbike-Begeisterten in Teterow und Umgebung. Auf unserem Vereinsgelände in den Heidbergen haben wir abwechslungsreiche Tracks geschaffen.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Egal ob Anfänger, erfahrener Racer oder Trailbuilder: Bei uns geht es um die Freude am Biken, gegenseitige Unterstützung, saubere Fahrtechnik und gechillte Sessions am Lagerfeuer.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="bg-brandDark p-4 rounded-lg border-l-4 border-brandYellow">
+                            <div class="font-heading text-3xl font-bold text-brandYellow">10+ JAHRE</div>
+                            <div class="text-xs text-gray-400 uppercase font-semibold">Community & Action</div>
+                        </div>
+                        <div class="bg-brandDark p-4 rounded-lg border-l-4 border-brandYellow">
+                            <div class="font-heading text-3xl font-bold text-brandYellow">100% PASSION</div>
+                            <div class="text-xs text-gray-400 uppercase font-semibold">Handmade Trails</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="h-48 bg-gray-800 rounded-xl overflow-hidden border border-brandGray">
+                            <img src="downhill.jpeg" alt="Biker Jump" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-brandDark p-6 rounded-xl border border-brandYellow/20 text-center">
+                            <i class="fa-solid fa-users text-4xl text-brandYellow mb-2"></i>
+                            <div class="font-heading text-xl font-bold text-white">STARKE CREW</div>
+                            <p class="text-xs text-gray-400 mt-1">Zusammen schreddern & bauen</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="bg-brandDark p-6 rounded-xl border border-brandYellow/20 text-center">
+                            <i class="fa-solid fa-screwdriver-wrench text-4xl text-brandYellow mb-2"></i>
+                            <div class="font-heading text-xl font-bold text-white">TRACKBUILDING</div>
+                            <p class="text-xs text-gray-400 mt-1">Regelmäßige Trailpflege</p>
+                        </div>
+                        <div class="h-48 bg-gray-800 rounded-xl overflow-hidden border border-brandGray">
+                            <img src="crew.jpg" alt="Forest Trail" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: DIE STRECKE -->
+    <section id="track" class="py-20 bg-brandDark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <div class="inline-block bg-brandYellow text-brandDark px-4 py-1 font-heading text-sm font-bold uppercase tracking-wider rounded">
+                    Spots & Features
+                </div>
+                <h2 class="font-heading text-4xl sm:text-6xl font-black uppercase text-white">
+                    DIE STRECKE IN DEN <span class="text-brandYellow">HEIDBERGEN</span>
+                </h2>
+                <p class="text-gray-400 text-lg">
+                    Abwechslungsreich, technisch und knackig. Unsere Lines bieten alles, was das Gravity-Herz begehrt.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-brandCharcoal p-6 rounded-xl border border-brandGray hover:border-brandYellow transition group">
+                    <div class="w-14 h-14 bg-brandDark rounded-lg flex items-center justify-center text-brandYellow text-2xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-white mb-2">ANLIEGER & FLOW</h3>
+                    <p class="text-gray-400 text-sm">Flüssige Kurvenkombinationen und schnelle Anlieger für optimalen Schwung.</p>
+                </div>
+
+                <div class="bg-brandCharcoal p-6 rounded-xl border border-brandGray hover:border-brandYellow transition group">
+                    <div class="w-14 h-14 bg-brandDark rounded-lg flex items-center justify-center text-brandYellow text-2xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-arrows-up-to-line"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-white mb-2">Tables & Kicker</h3>
+                    <p class="text-gray-400 text-sm">Verschiedene Sprungelemente damit du an deinen Airtime-Skills feilen kannst.</p>
+                </div>
+
+                <div class="bg-brandCharcoal p-6 rounded-xl border border-brandGray hover:border-brandYellow transition group">
+                    <div class="w-14 h-14 bg-brandDark rounded-lg flex items-center justify-center text-brandYellow text-2xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-white mb-2">TECH & ROOTS</h3>
+                    <p class="text-gray-400 text-sm">Wurzel- und Steinpassagen fordern dein Auge und verlangen saubere Linienwahl. </p>
+                </div>
+
+                <div class="bg-brandCharcoal p-6 rounded-xl border border-brandGray hover:border-brandYellow transition group">
+                    <div class="w-14 h-14 bg-brandDark rounded-lg flex items-center justify-center text-brandYellow text-2xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-white mb-2">SAFETY FIRST</h3>
+                    <p class="text-gray-400 text-sm">Nutzung nur mit Helm & Protektoren. Nehmt Rücksicht auf Natur und Mitmenschen!</p>
+                </div>
+            </div>
+
+            <!-- Rules Box -->
+            <div class="mt-12 bg-yellow-500/10 border-2 border-brandYellow p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="text-3xl text-brandYellow">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading text-xl font-bold text-white">TRAININGSGELÄNDE DES UNTERHOLZ E.V.</h4>
+                        <p class="text-sm text-gray-300">Befahren und Betreten auf eigene Gefahr! Der Verein übernimmt keinerlei Haftung. Helmpflicht!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: ACTIVITIES / WORKSHOPS -->
+    <section id="activities" class="py-20 bg-brandCharcoal border-t border-brandYellow/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <div class="inline-block bg-brandGray text-brandYellow px-3 py-1 font-heading text-sm font-bold uppercase tracking-wider rounded border border-brandYellow/30">
+                        Vereinsleben
+                    </div>
+                    <h2 class="font-heading text-4xl sm:text-5xl font-black uppercase text-white mt-2">
+                        TRAINING, WORKSHOPS & <span class="text-brandYellow">EVENTS</span>
+                    </h2>
+                </div>
+                <p class="text-gray-400 max-w-md mt-4 md:mt-0">
+                    Wir halten zusammen. Bei uns gibt es nicht nur Biken, sondern regelmäßigen Austausch, gemeinsame Pflege der Strecke und BBQ-Sessions.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-brandDark rounded-2xl overflow-hidden border border-brandGray flex flex-col justify-between">
+                    <div class="p-8 space-y-4">
+                        <div class="w-12 h-12 bg-brandYellow/10 rounded-lg flex items-center justify-center text-brandYellow text-2xl font-bold">
+                            01
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-white">REGELMÄSSIGES TRAINING</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Zusammen fährt man am besten! Wir treffen uns regelmäßig für gemeinsame Sessions auf der Strecke, feilen an Airtime, Kurventechnik und Speed.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-brandGray/40 border-t border-brandGray flex justify-between items-center text-xs font-semibold text-brandYellow">
+                        <span><i class="fa-regular fa-clock mr-1"></i> WÖCHENTLICH</span>
+                        <span>ALLE SKILL-LEVELS</span>
+                    </div>
+                </div>
+
+                <div class="bg-brandDark rounded-2xl overflow-hidden border border-brandGray flex flex-col justify-between">
+                    <div class="p-8 space-y-4">
+                        <div class="w-12 h-12 bg-brandYellow/10 rounded-lg flex items-center justify-center text-brandYellow text-2xl font-bold">
+                            02
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-white">WORKSHOPS & SETUPS</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Fahrwerk richtig einstellen? Linienwahl optimieren? In unseren gemeinsamen Workshops geben erfahrene Rider ihr Wissen weiter.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-brandGray/40 border-t border-brandGray flex justify-between items-center text-xs font-semibold text-brandYellow">
+                        <span><i class="fa-solid fa-wrench mr-1"></i> BIKE-SETUP & TECH</span>
+                        <span>COMMUNITY WORKSHOPS</span>
+                    </div>
+                </div>
+
+                <div class="bg-brandDark rounded-2xl overflow-hidden border border-brandGray flex flex-col justify-between">
+                    <div class="p-8 space-y-4">
+                        <div class="w-12 h-12 bg-brandYellow/10 rounded-lg flex items-center justify-center text-brandYellow text-2xl font-bold">
+                            03
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-white">TRACKBUILDING DAYS</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Kein Flow ohne Schaufel! Bei den gemeinsamen Bautagen pflegen wir die Strecken, bauen neue Sprünge und optimieren die Kurven.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-brandGray/40 border-t border-brandGray flex justify-between items-center text-xs font-semibold text-brandYellow">
+                        <span><i class="fa-solid fa-shovel mr-1"></i> BAUTAGE & BBQ</span>
+                        <span>HANDMADE TRAILS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: MITGLIED WERDEN & KONTAKT -->
+    <section id="join" class="py-20 bg-gradient-to-b from-brandDark via-brandCharcoal to-brandDark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="inline-block bg-brandYellow text-brandDark px-4 py-1 font-heading text-sm font-bold uppercase tracking-wider rounded">
+                        Werde Teil der Crew
+                    </div>
+                    <h2 class="font-heading text-4xl sm:text-5xl font-black uppercase text-white leading-tight">
+                        WERDE MITGLIED IM <span class="text-brandYellow">UNTERHOLZ E.V.</span>
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        Du hast Bock auf Downhill, möchtest regelmäßig auf der Strecke trainieren und das Vereinsleben mitgestalten? Melde dich direkt über das Formular bei uns!
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4 p-4 bg-brandDark rounded-xl border border-brandGray">
+                            <div class="w-10 h-10 bg-brandYellow rounded-lg flex items-center justify-center text-brandDark text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading text-lg font-bold text-white">Adresse / Vereinssitz</h4>
+                                <p class="text-sm text-gray-400">Unterholz e.V.<br>Warener Str. 34, Teterow</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-brandDark rounded-xl border border-brandGray">
+                            <div class="w-10 h-10 bg-brandYellow rounded-lg flex items-center justify-center text-brandDark text-xl shrink-0">
+                                <i class="fa-solid fa-tree"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading text-lg font-bold text-white">Strecken-Location</h4>
+                                <p class="text-sm text-gray-400">Heidberge Teterow</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-brandDark rounded-xl border border-brandGray">
+                            <div class="w-10 h-10 bg-brandYellow rounded-lg flex items-center justify-center text-brandDark text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading text-lg font-bold text-white">E-Mail Kontakt</h4>
+                                <a href="mailto:teterowrollt@gmail.com" class="text-sm text-brandYellow hover:underline">teterowrollt@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-brandDark p-6 sm:p-8 rounded-2xl border-2 border-brandYellow/30 shadow-2xl relative">
+                        <h3 class="font-heading text-3xl font-bold text-white mb-1">ANFRAGE & MITGLIEDSANTRAG</h3>
+                        <p class="text-sm text-gray-400 mb-6">Fülle das Formular aus, um eine Nachricht direkt an den Vorstand zu senden.</p>
+
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Vorname *</label>
+                                    <input type="text" id="firstName" required minlength="2" placeholder="z. B. Max" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Nachname *</label>
+                                    <input type="text" id="lastName" required minlength="2" placeholder="z. B. Mustermann" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Deine E-Mail *</label>
+                                    <input type="email" id="email" required placeholder="deine@adresse.de" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Geburtsdatum</label>
+                                    <input type="date" id="birthdate" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Anliegen / Typ *</label>
+                                <select id="requestType" class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition">
+                                    <option value="Vereinsmitgliedschaft (Mitgliedsantrag)">Vereinsmitgliedschaft (Mitgliedsantrag)</option>
+                                    <option value="Schnuppertraining / Probetraining">Schnuppertraining / Probetraining</option>
+                                    <option value="Trackbuilding / Trailcare">Trackbuilding / Trailcare unterstützen</option>
+                                    <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Deine Nachricht *</label>
+                                <textarea id="message" rows="4" required minlength="10" placeholder="Moin Unterholz e.V., ich würde gerne mitfahren..." class="w-full bg-brandCharcoal border border-brandGray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandYellow transition"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full skew-badge bg-brandYellow text-brandDark font-heading font-bold text-xl py-4 rounded uppercase hover:bg-white transition glow-yellow mt-4">
+                                <span class="unskew"><i class="fa-solid fa-paper-plane mr-2"></i> Anfrage Absenden</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 border-t border-brandGray text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-heading text-white text-xl font-bold mb-2">UNTERHOLZ E.V.</h4>
+                    <p class="text-xs text-gray-400">Downhill & Freeride Sport in den Heidbergen Teterow.<br>Eine Initiative von #teterowrollt und forma_te e.V.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading text-white text-xl font-bold mb-2">IMPRESSUM / REGISTER</h4>
+                    <p class="text-xs text-gray-400">
+                        Unterholz e.V.<br>
+                        Warener Str. 34, Teterow<br>
+                        Amtsgericht Güstrow | Nr. 5VR747
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-heading text-white text-xl font-bold mb-2">KONTAKT</h4>
+                    <p class="text-xs text-gray-400">
+                        E-Mail: <a href="mailto:teterowrollt@gmail.com" class="text-brandYellow hover:underline">teterowrollt@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-brandGray/40 pt-6 text-center text-xs text-gray-500">
+                &copy; Unterholz e.V. – Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const requestType = document.getElementById('requestType').value;
+            const message = document.getElementById('message').value;
+
+            const subject = encodeURIComponent(`Anfrage: ${requestType} - ${firstName} ${lastName}`);
+            const body = encodeURIComponent(`Hallo Unterholz e.V. Team,\n\nFormular-Anfrage:\n- Name: ${firstName} ${lastName}\n- E-Mail: ${email}\n- Anliegen: ${requestType}\n\nNachricht:\n${message}`);
+
+            window.location.href = `mailto:d.schuh@espiat.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+</html>
